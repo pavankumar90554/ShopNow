@@ -1,0 +1,18 @@
+# Ignore everything in target
+target/*
+# Allow only the final Spring Boot jar
+!target/Shopping_Cart-0.0.1-SNAPSHOT.jar
+
+# Git files
+.git
+.gitignore
+
+# Maven wrapper
+.mvn
+mvnw
+mvnw.cmd
+
+# IDE / logs
+*.log
+.idea
+.vscode
