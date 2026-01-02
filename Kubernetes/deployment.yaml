@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopapp-deployment
+  labels:
+    app: shopapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shopapp
+  template:
+    metadata:
+      labels:
+        app: shopapp
+    spec:
+      containers:
+      - name: shopapp
+        image: pavankumar213/my-shop-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+
